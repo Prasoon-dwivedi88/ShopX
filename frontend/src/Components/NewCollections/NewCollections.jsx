@@ -4,7 +4,7 @@ import Item from '../Item/Item'
 const NewCollections = () => {
   const [new_collection,setNew_collection]=useState([]);
   useEffect(()=>{
-    fetch('http://localhost:4000/newcollections')
+    fetch('https://shopx-5097.onrender.com/newcollections')
     .then((response)=>response.json())
     .then((data)=>setNew_collection(data));
   },[])//square bracket to ensure useEffect is used only once

@@ -19,13 +19,13 @@ const ShopContextProvider = (props) =>{
     const [all_product,setAll_Product]=useState([]);
     const [cartItems,setCartItems]=useState(getDefaultCart);
     useEffect(()=>{
-        fetch('http://localhost:4000/allproducts')
+        fetch('https://shopx-5097.onrender.com/allproducts')
         .then((response)=>response.json())
         .then((data)=>setAll_Product(data))
         //when the e commerce webpage will be loaded in that case all products will be fetched and if auth token is available when we r logged in in that case cartdata will be fetched from database and it will be saved in ShopContext..using that we'll update cartitems in cart page
         //linking getcart api with frontend now
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/getcart',{
+            fetch('https://shopx-5097.onrender.com/getcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -43,7 +43,7 @@ const ShopContextProvider = (props) =>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
         if(localStorage.getItem('auth-token')){
             //if has auth token means we r logged in..so we'll update item id in mongodb database
-            fetch('http://localhost:4000/addtocart',{
+            fetch('https://shopx-5097.onrender.com/addtocart',{
                 method:'POST',
                 headers:{
                      Accept:'application/form-data',
@@ -62,7 +62,7 @@ const ShopContextProvider = (props) =>{
         //same logic as above addtocart just change the endpoint
         if(localStorage.getItem('auth-token')){
             //if has auth token means we r logged in..so we'll update item id in mongodb database
-            fetch('http://localhost:4000/removefromcart',{
+            fetch('https://shopx-5097.onrender.com/removefromcart',{
                 method:'POST',
                 headers:{
                      Accept:'application/form-data',

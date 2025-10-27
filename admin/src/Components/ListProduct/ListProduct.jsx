@@ -7,7 +7,7 @@ const ListProduct = () => {
     const [allproducts,setAllProducts]=useState([]);
     //now a function from which we can fetch data from api and store it in this state variable
     const fetchInfo=async ()=>{
-        await fetch('http://localhost:4000/allproducts')
+        await fetch('https://shopx-5097.onrender.com/allproducts')
         .then((res)=>res.json())
         .then((data)=>{setAllProducts(data)})
         //first parsing using res.json() then saved this data in allproducts state variable 
@@ -18,7 +18,7 @@ const ListProduct = () => {
     []);
     //to make the cross icon functional
     const remove_product= async(id)=>{
-        await fetch('http://localhost:4000/removeproduct',{
+        await fetch('https://shopx-5097.onrender.com/removeproduct',{
             method:'POST',
             headers:{
                 Accept:'application/json',

@@ -24,6 +24,11 @@ const Navbar = () => {
                 <li onClick={()=>{setMenu("mens")}}><Link style={{textDecoration:'none'}} to='/mens'>Men</Link>{menu==="mens"?<hr/>:<></>}</li>
                 <li onClick={()=>{setMenu("womens")}}><Link style={{textDecoration:'none'}} to='/womens'>Women</Link>{menu==="womens"?<hr/>:<></>}</li>
                 <li onClick={()=>{setMenu("kids")}}><Link style={{textDecoration:'none'}} to='/kids'>Kids</Link>{menu==="kids"?<hr/>:<></>}</li>
+
+                {/* Hidden admin link */}
+        <li className="admin-link">
+          <a href="https://shop-x-admin-pearl.vercel.app/" target="_blank" rel="noreferrer">Admin</a>
+        </li>
             </ul>
             <div className="nav-login-cart">
                 {/* creating logout functionality...if local storage has 1 auth token then we'll display the logout button and also remove the token*/}

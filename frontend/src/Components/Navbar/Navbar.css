@@ -233,3 +233,6 @@
         gap: 10px;
     }
 } */
+ .admin-link {
+  display: none; /* hide it completely from normal users */
+}

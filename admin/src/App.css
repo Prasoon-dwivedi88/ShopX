@@ -1,0 +1,43 @@
+/* this styling is :optional */
+.admin-login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+}
+
+.admin-login h2 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.admin-login input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+.admin-login button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 8px 16px;
+  background: #d33;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
